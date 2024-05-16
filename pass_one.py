@@ -8,3 +8,6 @@ LOCCTR = ""
 PRGNAME = ""
 PRGLNGTH = ""
 
+def open_symbol_table(): 
+    global sym
+    sym = open("SymbolTable.txt", "w")
