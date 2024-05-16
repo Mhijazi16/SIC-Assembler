@@ -29,3 +29,17 @@ def open_files():
         code = open("source.asm","r")
         intmdt = open("Intermediate.mdt","w")
 
+def write_headers():
+    global LOCCTR,PRGNAME
+    intmdt.write("Line No.  Address         Source code             comments \n")
+    intmdt.write("----------------------------------------------------------\n")
+
+    first = code.readline()
+    intmdt.write("                    ")
+    intmdt.write("".join(first))
+    one = first.strip().split()
+
+    PRGNAME = one[0]
+    LOCCTR = one[2]
+    SYMTAB[one[1]] = one[2]
+    sym.write(f"{one[1]} {one[2]} \n")
