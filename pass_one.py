@@ -87,3 +87,14 @@ def pass_one():
                 current = hex(int(LOCCTR,16)+size)
                 LOCCTR = str(current)
             index += 1
+
+def print_display():
+    PRGLNGTH = LOCCTR
+    print("Preess Enter to go through the steps : ")
+    print(f"program name is {PRGNAME}")
+    input()
+    print(f"program length is {PRGLNGTH}")
+    input()
+    print("THE SYMBOL TABLE")
+    print("===================")
+    input()
