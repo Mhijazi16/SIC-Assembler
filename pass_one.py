@@ -17,3 +17,15 @@ def initialize_OPBTAB():
         for line in appendix : 
             n = line.strip().split()
             OPTAB[n[0]] = n[1]
+
+def open_files(): 
+    global code, dest, intmdt 
+    if len(sys.argv) > 1: 
+        source = sys.argv[1]
+        dest = sys.argv[2]
+        code = open(source, "r")
+        intmdt = open(dest,"w")
+    else:
+        code = open("source.asm","r")
+        intmdt = open("Intermediate.mdt","w")
+
