@@ -112,3 +112,16 @@ def close_files():
     print("check Intermediate.mdt to see the Intermediate file")
     print("===================")
     input()
+
+def main():
+    open_files()
+    initialize_OPBTAB()
+    open_symbol_table()
+    write_headers()
+    pass_one()
+    print_display()
+    print_symbols()
+    close_files()
+
+if __name__ == "__main__":
+    main()
