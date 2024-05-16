@@ -98,3 +98,7 @@ def print_display():
     print("THE SYMBOL TABLE")
     print("===================")
     input()
+
+def print_symbols():
+    for key, value in SYMTAB.items(): 
+        print(key + " : " + value)
