@@ -102,3 +102,13 @@ def print_display():
 def print_symbols():
     for key, value in SYMTAB.items(): 
         print(key + " : " + value)
+				
+def close_files(): 
+    global code, intmdt
+    code.close()
+    intmdt.close()
+
+    print("===================")
+    print("check Intermediate.mdt to see the Intermediate file")
+    print("===================")
+    input()
