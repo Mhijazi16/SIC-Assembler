@@ -51,3 +51,17 @@ def get_program_length():
     print("🚀 END At : ",hex(END))
     print("🚀 Program Lenght is: ",LEN)
     return LEN
+
+def read_program_name():
+
+    line = mdt.readline()
+    listing_file.write(f"{line}")
+
+    parts = line.strip().split()
+
+    if parts[0] not in OPTAB.keys():
+        obj.write(f"H^{parts[0]}^{extend_number(hex(LOCCTR)[2:],6)}^{extend_number(PRGLGTH[2:],6)}\n")
+        print("🚀 Program Name is: ", parts[0])
+        return parts[0]
+    obj.write(f"H^{PRGNAME}^{hex(LOCCTR)[2:]}^{PRGLGTH[2:]}\n")
+    return ""
