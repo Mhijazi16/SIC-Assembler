@@ -15,3 +15,11 @@ def read_OPTAB() :
         OPTAB[parts[0]] = parts[1]
     appendix.close()
     print("🚀 OPTAB was Loaded!")
+
+def read_SYMTAB():
+    sym = open("SymbolTable.txt", "r")
+    for line in sym: 
+        parts = line.strip().split() 
+        SYMTAB[parts[0]] = parts[1]
+    sym.close()
+    print("🚀 SYMTAB was Loaded!")
