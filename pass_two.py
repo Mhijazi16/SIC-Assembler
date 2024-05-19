@@ -43,3 +43,11 @@ def open_files():
     print("object File is: ", dest)
 
     return mdt, listing_file, obj
+    
+def get_program_length():
+    END = int(SYMTAB["END"],16)
+    LEN = hex(END - LOCCTR)
+    print("🚀 LOCCTR At : ",hex(LOCCTR))
+    print("🚀 END At : ",hex(END))
+    print("🚀 Program Lenght is: ",LEN)
+    return LEN
