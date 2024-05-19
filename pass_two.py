@@ -23,3 +23,23 @@ def read_SYMTAB():
         SYMTAB[parts[0]] = parts[1]
     sym.close()
     print("🚀 SYMTAB was Loaded!")
+
+def open_files():
+    source = "intermideate.txt"
+    dest = "output.obj"
+    if len(sys.argv) > 2 : 
+        source = sys.argv[1]
+        dest = sys.argv[2]
+    elif len(sys.argv) == 2 : 
+        source = sys.argv[1]
+
+    mdt = open(source,"r")
+    listing_file = open("ListingFile.txt","w")
+    obj = open(dest,"w")
+
+    mdt.readline()
+    mdt.readline()
+    print("intermideate File is: ", source)
+    print("object File is: ", dest)
+
+    return mdt, listing_file, obj
