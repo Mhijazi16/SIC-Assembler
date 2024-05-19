@@ -65,3 +65,15 @@ def read_program_name():
         return parts[0]
     obj.write(f"H^{PRGNAME}^{hex(LOCCTR)[2:]}^{PRGLGTH[2:]}\n")
     return ""
+
+def extend_number(number:str,extent): 
+    if len(number) >= extent:
+        return number
+    while len(number) != extent:
+        number = "0" + number
+    return number
+
+def subtract(one,two):
+    one = int(one,16)
+    two = int(two,16)
+    return hex(one - two)
